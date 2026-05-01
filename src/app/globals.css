@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0b0a08;
+  --surface: #14110d;
+  --border: rgba(245, 239, 230, 0.14);
+  --primary-text: #f5efe6;
+  --muted-text: #c6baaa;
+  --accent: #d7a86e;
+  --accent-muted: #8f7658;
+  --foreground: var(--primary-text);
+  --muted-foreground: var(--muted-text);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --font-sans: "Inter", "Inter Fallback", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", "Cormorant Garamond Fallback", Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--background);
+}
+
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at top left, rgba(215, 168, 110, 0.1), transparent 34rem),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.025), transparent 22rem),
+    var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), "Inter", "Inter Fallback", ui-sans-serif, system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba(215, 168, 110, 0.32);
+  color: var(--foreground);
+}
+
+a {
+  text-underline-offset: 0.2em;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.font-heading {
+  font-family: var(--font-heading), "Cormorant Garamond", "Cormorant Garamond Fallback", Georgia, serif;
+}
+
+.section-shell {
+  width: min(100%, 72rem);
+  margin-inline: auto;
+  padding: clamp(5rem, 9vw, 8rem) 1.5rem;
+  scroll-margin-top: 7rem;
+}
+
+.section-divider {
+  border-top: 1px solid var(--border);
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.text-muted {
+  color: var(--muted-text);
+}
+
+.surface-panel {
+  background: color-mix(in srgb, var(--surface) 82%, transparent);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 640px) {
+  .section-shell {
+    padding-block: 4.5rem;
+  }
+}
