@@ -67,6 +67,24 @@ export type Credential = {
 export type ContactLink = {
   label: string;
   href: string;
+  type: "email" | "linkedin" | "github" | "tryhackme" | "resume";
+  download?: boolean;
+};
+
+export type ContactProfile = {
+  eyebrow: string;
+  title: string;
+  description: string;
+  message: string;
+  ctaTitle: string;
+  ctaText: string;
+  email: string;
+  phone: string;
+  phoneHref: string;
+  location: string;
+  availability: string[];
+  resumePath: string;
+  links: ContactLink[];
 };
 
 export const experience = [
@@ -293,6 +311,57 @@ export const about = {
   ],
 } satisfies AboutProfile;
 
+export const contact = {
+  eyebrow: "Contact",
+  title: "Professional contact links.",
+  description:
+    "Open to cybersecurity, SOC monitoring, network security, and IT security support opportunities.",
+  message:
+    "Currently seeking opportunities where I can contribute to SOC monitoring, phishing analysis, vulnerability assessment, incident response, and network security operations.",
+  ctaTitle: "Ready to discuss cybersecurity opportunities?",
+  ctaText:
+    "For internship, SOC analyst, network security, or IT security support opportunities, use the links below to connect with Violet or download her resume.",
+  email: "achiengviolet381@gmail.com",
+  phone: "(+254) 0742953000",
+  phoneHref: "+254742953000",
+  location: "Nairobi, Kenya",
+  availability: [
+    "Cybersecurity Intern",
+    "SOC Analyst L1",
+    "Network Security Analyst",
+    "IT Security Support",
+  ],
+  resumePath: "/documents/violet-achieng-resume.pdf",
+  links: [
+    {
+      label: "Email",
+      href: "mailto:achiengviolet381@gmail.com",
+      type: "email",
+    },
+    {
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/violet-achieng-265191299/",
+      type: "linkedin",
+    },
+    {
+      label: "GitHub",
+      href: "https://github.com/",
+      type: "github",
+    },
+    {
+      label: "TryHackMe",
+      href: "https://tryhackme.com/",
+      type: "tryhackme",
+    },
+    {
+      label: "Resume Download",
+      href: "/documents/violet-achieng-resume.pdf",
+      type: "resume",
+      download: true,
+    },
+  ],
+} satisfies ContactProfile;
+
 export const portfolio = {
   personal: {
     name: "Violet Achieng",
@@ -433,10 +502,6 @@ export const portfolio = {
     "SOC learning path",
   ],
   credentials,
-  contactLinks: [
-    { label: "Email", href: "mailto:violet@example.com" },
-    { label: "LinkedIn", href: "https://www.linkedin.com/" },
-    { label: "GitHub", href: "https://github.com/" },
-    { label: "TryHackMe", href: "https://tryhackme.com/" },
-  ] satisfies ContactLink[],
+  contact,
+  contactLinks: contact.links,
 };
