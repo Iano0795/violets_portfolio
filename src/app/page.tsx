@@ -1,19 +1,12 @@
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { AboutSection } from "@/components/sections/AboutSection";
 import { CredentialsSection } from "@/components/sections/CredentialsSection";
 import { ExperienceSection } from "@/components/sections/ExperienceSection";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
 import { SkillsSection } from "@/components/sections/SkillsSection";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-
-const aboutPlaceholder = {
-  id: "about",
-  eyebrow: "About",
-  title: "A focused defensive security profile.",
-  description:
-    "This section will introduce Violet's background, cybersecurity direction, and portfolio positioning.",
-};
 
 const remainingPlaceholderSections = [
   {
@@ -32,19 +25,7 @@ export default function Home() {
       <main className="overflow-hidden">
         <HeroSection />
 
-        <section
-          className="section-divider section-shell"
-          id={aboutPlaceholder.id}
-        >
-          <SectionHeader
-            description={aboutPlaceholder.description}
-            eyebrow={aboutPlaceholder.eyebrow}
-            title={aboutPlaceholder.title}
-          />
-          <div className="surface-panel mt-10 p-6 text-sm leading-7 text-muted-foreground">
-            Placeholder content for the {aboutPlaceholder.eyebrow.toLowerCase()} section.
-          </div>
-        </section>
+        <AboutSection />
 
         <SkillsSection />
 

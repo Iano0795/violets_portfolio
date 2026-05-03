@@ -16,6 +16,20 @@ export type SkillHighlight = {
   description: string;
 };
 
+export type AboutCapability = {
+  title: string;
+  description: string;
+};
+
+export type AboutProfile = {
+  eyebrow: string;
+  title: string;
+  description: string;
+  paragraphs: string[];
+  capabilities: AboutCapability[];
+  targetRoles: string[];
+};
+
 export type ExperienceItem = {
   company: string;
   role: string;
@@ -240,6 +254,45 @@ export const credentials = [
   },
 ] satisfies Credential[];
 
+export const about = {
+  eyebrow: "About Violet",
+  title: "A focused defensive security profile.",
+  description:
+    "Violet Achieng is an entry-level cybersecurity professional with a background in Mathematics and Computer Science. Her focus is on SOC monitoring, threat detection, phishing analysis, vulnerability assessment, network security, and incident response.",
+  paragraphs: [
+    "Violet Achieng is an entry-level cybersecurity professional building practical capability across SOC monitoring, network security, vulnerability assessment, and incident response. With a Mathematics and Computer Science background, she brings analytical thinking, structured investigation, and technical curiosity into security work.",
+    "Her hands-on practice includes network enumeration, phishing analysis concepts, Linux-based labs, basic exploitation workflows, and defensive documentation. She is especially interested in roles where she can support alert triage, security monitoring, incident investigation, and continuous improvement of digital defenses.",
+  ],
+  capabilities: [
+    {
+      title: "Defensive Mindset",
+      description:
+        "Focused on monitoring, investigation, and reducing security risk.",
+    },
+    {
+      title: "Analytical Foundation",
+      description:
+        "Strong academic grounding in mathematics, computing, and structured problem solving.",
+    },
+    {
+      title: "Hands-on Practice",
+      description:
+        "Practical exposure through cybersecurity labs, tools, and controlled simulations.",
+    },
+    {
+      title: "Documentation Discipline",
+      description:
+        "Able to record findings, summarize risks, and communicate clearly.",
+    },
+  ],
+  targetRoles: [
+    "Cybersecurity Intern",
+    "SOC Analyst L1",
+    "Network Security Analyst",
+    "IT Security Support",
+  ],
+} satisfies AboutProfile;
+
 export const portfolio = {
   personal: {
     name: "Violet Achieng",
@@ -358,6 +411,7 @@ export const portfolio = {
       description: "Findings written clearly for analysts, teams, and recruiters.",
     },
   ] satisfies SkillHighlight[],
+  about,
   experienceFocus: [
     "Cybersecurity Labs",
     "Data Integrity",
