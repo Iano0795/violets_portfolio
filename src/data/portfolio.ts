@@ -276,10 +276,10 @@ export const about = {
   eyebrow: "About Violet",
   title: "A focused defensive security profile.",
   description:
-    "Violet brings an analytical and disciplined approach to cybersecurity, shaped by her Mathematics and Computer Science background. Her work is grounded in careful investigation, clear documentation, and practical security learning.",
+    "I bring an analytical and disciplined approach to cybersecurity, shaped by my Mathematics and Computer Science background. My work is grounded in careful investigation, clear documentation, and practical security learning.",
   paragraphs: [
-    "She is developing capability across SOC monitoring, network security, vulnerability assessment, phishing analysis, and incident response. Through hands-on labs and guided practice, she has worked with tools such as Nmap, Wireshark, Hydra, Burp Suite, Linux, and Ghidra to understand how threats are identified, analyzed, and reported.",
-    "Violet is especially drawn to defensive security because it combines technical curiosity with real-world problem solving. She is looking for opportunities where she can support security monitoring, investigate alerts, document findings, and continue growing within a structured security team.",
+    "Developing capability across SOC monitoring, network security, vulnerability assessment, phishing analysis, and incident response. Through hands-on labs and guided practice, I have worked with tools such as Nmap, Wireshark, Hydra, Burp Suite, Linux, and Ghidra to understand how threats are identified, analyzed, and reported.",
+    "I am especially drawn to defensive security because it combines technical curiosity with real-world problem solving. I am looking for opportunities where I can support security monitoring, investigate alerts, document findings, and continue growing within a structured security team.",
   ],
   capabilities: [
     {
