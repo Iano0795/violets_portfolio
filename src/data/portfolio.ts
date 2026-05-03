@@ -6,7 +6,14 @@ export type NavigationLink = {
 export type SkillGroup = {
   category: string;
   description: string;
+  label: string;
+  featured?: boolean;
   items: string[];
+};
+
+export type SkillHighlight = {
+  title: string;
+  description: string;
 };
 
 export type ExperienceItem = {
@@ -60,6 +67,8 @@ export const portfolio = {
       category: "SOC & Monitoring",
       description:
         "Monitoring and triage capabilities for entry-level SOC environments.",
+      label: "SOC readiness",
+      featured: true,
       items: [
         "Alert triage",
         "Log review",
@@ -73,6 +82,7 @@ export const portfolio = {
       category: "Networking",
       description:
         "Core network fundamentals for analyzing traffic and understanding security events.",
+      label: "Network defense",
       items: [
         "TCP/IP",
         "DNS",
@@ -86,12 +96,15 @@ export const portfolio = {
       category: "Security Tools",
       description:
         "Hands-on tool exposure for scanning, testing, analysis, and lab workflows.",
+      label: "Tooling",
+      featured: true,
       items: ["Wireshark", "Nmap", "Burp Suite", "Metasploit", "Hydra", "Ghidra"],
     },
     {
       category: "Systems & Platforms",
       description:
         "Practical operating system and lab environment skills for security work.",
+      label: "Systems",
       items: [
         "Linux",
         "Windows basics",
@@ -105,6 +118,7 @@ export const portfolio = {
       category: "Scripting & Data",
       description:
         "Basic scripting, data handling, and documentation skills for repeatable analysis.",
+      label: "Scripting",
       items: [
         "Python",
         "SQL",
@@ -118,6 +132,7 @@ export const portfolio = {
       category: "Security Concepts",
       description:
         "Foundational security concepts practiced through labs and guided analysis.",
+      label: "Security fundamentals",
       items: [
         "Vulnerability assessment",
         "Enumeration",
@@ -129,11 +144,23 @@ export const portfolio = {
     },
   ] satisfies SkillGroup[],
   skillHighlights: [
-    "SOC-ready fundamentals",
-    "Practical lab exposure",
-    "Network security foundation",
-    "Documentation mindset",
-  ],
+    {
+      title: "SOC-ready fundamentals",
+      description: "Alert triage, log review, and clear escalation habits.",
+    },
+    {
+      title: "Practical lab exposure",
+      description: "Hands-on practice across tools, systems, and security labs.",
+    },
+    {
+      title: "Network security foundation",
+      description: "Grounded understanding of traffic, protocols, and segments.",
+    },
+    {
+      title: "Documentation mindset",
+      description: "Findings written clearly for analysts, teams, and recruiters.",
+    },
+  ] satisfies SkillHighlight[],
   experience: [
     {
       role: "Cybersecurity Portfolio Builder",
