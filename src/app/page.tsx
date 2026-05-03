@@ -2,6 +2,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { ExperienceSection } from "@/components/sections/ExperienceSection";
 import { HeroSection } from "@/components/sections/HeroSection";
+import { ProjectsSection } from "@/components/sections/ProjectsSection";
 import { SkillsSection } from "@/components/sections/SkillsSection";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 
@@ -14,13 +15,6 @@ const aboutPlaceholder = {
 };
 
 const remainingPlaceholderSections = [
-  {
-    id: "projects",
-    eyebrow: "Projects",
-    title: "Cybersecurity labs and case studies.",
-    description:
-      "This section will present portfolio projects with clear objectives, evidence, and outcomes.",
-  },
   {
     id: "certifications",
     eyebrow: "Certifications",
@@ -61,6 +55,8 @@ export default function Home() {
         <SkillsSection />
 
         <ExperienceSection />
+
+        <ProjectsSection />
 
         {remainingPlaceholderSections.map((section) => (
           <section

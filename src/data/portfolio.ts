@@ -29,9 +29,13 @@ export type ExperienceItem = {
 
 export type Project = {
   title: string;
-  type: string;
+  source: string;
   summary: string;
-  focusAreas: string[];
+  objective: string;
+  actions: string[];
+  tools: string[];
+  skills: string[];
+  outcome: string;
   href?: string;
 };
 
@@ -91,6 +95,78 @@ export const experience = [
     ],
   },
 ] satisfies ExperienceItem[];
+
+export const projects = [
+  {
+    title: "Security Monitoring & Enumeration Lab",
+    source: "TryHackMe",
+    summary:
+      "Practiced service enumeration, network scanning, and basic exploitation analysis in a controlled lab environment.",
+    objective:
+      "Identify exposed services, understand attack surface, and document findings from a vulnerable machine.",
+    actions: [
+      "Performed network scanning and service enumeration using Nmap.",
+      "Identified open ports, service versions, and potential attack paths.",
+      "Reviewed common misconfigurations and exploitation possibilities.",
+      "Documented findings, risk areas, and basic mitigation recommendations.",
+    ],
+    tools: ["Nmap", "Wireshark", "Metasploit", "Linux"],
+    skills: [
+      "Enumeration",
+      "Network analysis",
+      "Vulnerability assessment",
+      "Documentation",
+    ],
+    outcome:
+      "Improved understanding of how exposed services can be identified, assessed, and reported during early-stage security analysis.",
+  },
+  {
+    title: "Basic Pentesting & Incident Analysis Lab",
+    source: "Custom Lab",
+    summary:
+      "Simulated a basic attack investigation workflow from discovery to incident documentation.",
+    objective:
+      "Trace a controlled attack path, identify indicators of compromise, and summarize incident findings.",
+    actions: [
+      "Used basic scanning and enumeration to identify possible entry points.",
+      "Reviewed authentication weaknesses and brute-force concepts using Hydra in a controlled setting.",
+      "Mapped observed activity to possible incident indicators.",
+      "Created a short incident-style summary with findings and recommendations.",
+    ],
+    tools: ["Hydra", "Nmap", "Linux", "Burp Suite"],
+    skills: [
+      "Incident analysis",
+      "Brute-force analysis",
+      "Authentication testing",
+      "Security reporting",
+    ],
+    outcome:
+      "Built practical understanding of how offensive observations can support defensive investigation and SOC-style triage.",
+  },
+  {
+    title: "Reverse Engineering & Malware Analysis Practice",
+    source: "CrackMe / Practice Binary",
+    summary:
+      "Analyzed a simple practice binary to understand program behavior, strings, and basic reverse engineering workflow.",
+    objective:
+      "Inspect binary behavior, identify useful strings, and understand how sensitive logic can be exposed through poor software protection.",
+    actions: [
+      "Loaded and inspected a practice binary using Ghidra.",
+      "Reviewed strings, functions, and control flow at a basic level.",
+      "Identified exposed logic and sensitive indicators.",
+      "Documented observations in a beginner-friendly analysis note.",
+    ],
+    tools: ["Ghidra", "Linux", "Strings", "Terminal"],
+    skills: [
+      "Reverse engineering basics",
+      "Malware analysis fundamentals",
+      "Static analysis",
+      "Technical documentation",
+    ],
+    outcome:
+      "Developed foundational awareness of binary analysis, exposed logic risks, and malware investigation concepts.",
+  },
+] satisfies Project[];
 
 export const portfolio = {
   personal: {
@@ -217,29 +293,13 @@ export const portfolio = {
     "Documentation",
   ],
   experience,
-  projects: [
-    {
-      title: "SOC Alert Triage Lab",
-      type: "Defensive Lab",
-      summary:
-        "A structured lab for investigating suspicious activity from logs and turning raw alerts into concise analyst notes.",
-      focusAreas: ["SIEM workflow", "Alert prioritization", "Incident notes"],
-    },
-    {
-      title: "Network Traffic Investigation",
-      type: "Packet Analysis",
-      summary:
-        "A lab project focused on identifying abnormal network behavior and summarizing findings from traffic evidence.",
-      focusAreas: ["Wireshark", "Network indicators", "Traffic review"],
-    },
-    {
-      title: "Threat Detection Case Study",
-      type: "Detection Engineering",
-      summary:
-        "A portfolio case study for translating attacker behavior into practical detection ideas and response steps.",
-      focusAreas: ["MITRE ATT&CK", "Detection logic", "Response planning"],
-    },
-  ] satisfies Project[],
+  projectFocus: [
+    "Lab-based learning",
+    "Defensive analysis",
+    "Tool familiarity",
+    "Report writing",
+  ],
+  projects,
   credentials: [
     {
       name: "Cybersecurity Training",

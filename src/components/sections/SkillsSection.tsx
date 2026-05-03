@@ -54,7 +54,7 @@ export function SkillsSection() {
               className="surface-panel min-h-full px-4 py-4"
               key={highlight.title}
             >
-              <div className="flex items-start gap-3">
+              <div className="flex items-center gap-3">
                 {(() => {
                   const HighlightIcon = highlightIcons[highlight.title];
 
@@ -68,9 +68,9 @@ export function SkillsSection() {
                   <p className="font-semibold leading-5 text-foreground">
                     {highlight.title}
                   </p>
-                  <p className="mt-1 text-xs leading-5 text-muted-foreground">
+                  {/* <p className="mt-1 text-xs leading-5 text-muted-foreground">
                     {highlight.description}
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </li>
