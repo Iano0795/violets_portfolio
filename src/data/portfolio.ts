@@ -258,31 +258,31 @@ export const about = {
   eyebrow: "About Violet",
   title: "A focused defensive security profile.",
   description:
-    "Violet Achieng is an entry-level cybersecurity professional with a background in Mathematics and Computer Science. Her focus is on SOC monitoring, threat detection, phishing analysis, vulnerability assessment, network security, and incident response.",
+    "Violet brings an analytical and disciplined approach to cybersecurity, shaped by her Mathematics and Computer Science background. Her work is grounded in careful investigation, clear documentation, and practical security learning.",
   paragraphs: [
-    "Violet Achieng is an entry-level cybersecurity professional building practical capability across SOC monitoring, network security, vulnerability assessment, and incident response. With a Mathematics and Computer Science background, she brings analytical thinking, structured investigation, and technical curiosity into security work.",
-    "Her hands-on practice includes network enumeration, phishing analysis concepts, Linux-based labs, basic exploitation workflows, and defensive documentation. She is especially interested in roles where she can support alert triage, security monitoring, incident investigation, and continuous improvement of digital defenses.",
+    "She is developing capability across SOC monitoring, network security, vulnerability assessment, phishing analysis, and incident response. Through hands-on labs and guided practice, she has worked with tools such as Nmap, Wireshark, Hydra, Burp Suite, Linux, and Ghidra to understand how threats are identified, analyzed, and reported.",
+    "Violet is especially drawn to defensive security because it combines technical curiosity with real-world problem solving. She is looking for opportunities where she can support security monitoring, investigate alerts, document findings, and continue growing within a structured security team.",
   ],
   capabilities: [
     {
       title: "Defensive Mindset",
       description:
-        "Focused on monitoring, investigation, and reducing security risk.",
+        "Interested in protecting systems through monitoring, investigation, and practical risk reduction.",
     },
     {
       title: "Analytical Foundation",
       description:
-        "Strong academic grounding in mathematics, computing, and structured problem solving.",
+        "Applies structured thinking from mathematics and computer science to security analysis.",
     },
     {
       title: "Hands-on Practice",
       description:
-        "Practical exposure through cybersecurity labs, tools, and controlled simulations.",
+        "Builds practical confidence through labs, simulations, and security tool workflows.",
     },
     {
-      title: "Documentation Discipline",
+      title: "Clear Documentation",
       description:
-        "Able to record findings, summarize risks, and communicate clearly.",
+        "Values accurate notes, concise reporting, and evidence-based communication.",
     },
   ],
   targetRoles: [

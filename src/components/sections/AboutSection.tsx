@@ -13,7 +13,7 @@ const capabilityIcons: Record<string, LucideIcon> = {
   "Defensive Mindset": ShieldCheck,
   "Analytical Foundation": Brain,
   "Hands-on Practice": FlaskConical,
-  "Documentation Discipline": FileText,
+  "Clear Documentation": FileText,
 };
 
 export function AboutSection() {
