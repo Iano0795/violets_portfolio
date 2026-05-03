@@ -73,7 +73,6 @@ export function Header() {
             ) : (
               <Menu aria-hidden="true" size={16} strokeWidth={1.9} />
             )}
-            
           </button>
         </div>
 
