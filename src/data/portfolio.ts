@@ -40,9 +40,14 @@ export type Project = {
 };
 
 export type Credential = {
-  name: string;
+  type: string;
+  title: string;
   issuer: string;
+  period: string;
   status: string;
+  description: string;
+  highlights: string[];
+  featured?: boolean;
 };
 
 export type ContactLink = {
@@ -167,6 +172,73 @@ export const projects = [
       "Developed foundational awareness of binary analysis, exposed logic risks, and malware investigation concepts.",
   },
 ] satisfies Project[];
+
+export const credentials = [
+  {
+    type: "Education",
+    title: "Bachelor's Degree in Mathematics and Computer Science",
+    issuer: "Kirinyaga University",
+    period: "2021 - 2025",
+    status: "Completed / Awaiting Graduation",
+    description:
+      "Built a strong foundation in programming, systems thinking, mathematics, databases, and computer science fundamentals.",
+    highlights: [
+      "Programming fundamentals",
+      "Computer science foundations",
+      "Mathematics and analytical thinking",
+      "Databases and systems concepts",
+    ],
+    featured: true,
+  },
+  {
+    type: "Certification / Training",
+    title: "CCNA / Networking Fundamentals",
+    issuer: "Cisco Networking Academy",
+    period: "In Progress",
+    status: "Learning Path",
+    description:
+      "Developing networking fundamentals relevant to SOC analysis, network security, and infrastructure monitoring.",
+    highlights: [
+      "TCP/IP",
+      "Routing and switching basics",
+      "Subnetting",
+      "Network troubleshooting",
+      "Security fundamentals",
+    ],
+  },
+  {
+    type: "Practical Labs",
+    title: "Cybersecurity Labs & SOC Foundations",
+    issuer: "TryHackMe",
+    period: "Ongoing",
+    status: "Hands-on Practice",
+    description:
+      "Completing practical cybersecurity labs focused on enumeration, Linux, network scanning, security tools, and beginner SOC concepts.",
+    highlights: [
+      "Pre-Security",
+      "Linux fundamentals",
+      "Nmap",
+      "Web security basics",
+      "Defensive security concepts",
+    ],
+  },
+  {
+    type: "Learning Track",
+    title: "SOC Analyst & Incident Response Preparation",
+    issuer: "Cybersecurity Self-Study",
+    period: "Ongoing",
+    status: "Active Development",
+    description:
+      "Structured self-study focused on SOC monitoring, phishing analysis, alert triage, incident response, and vulnerability assessment.",
+    highlights: [
+      "SIEM concepts",
+      "Alert triage",
+      "Phishing analysis",
+      "Incident response lifecycle",
+      "Vulnerability assessment",
+    ],
+  },
+] satisfies Credential[];
 
 export const portfolio = {
   personal: {
@@ -300,18 +372,13 @@ export const portfolio = {
     "Report writing",
   ],
   projects,
-  credentials: [
-    {
-      name: "Cybersecurity Training",
-      issuer: "Portfolio Credential",
-      status: "In progress",
-    },
-    {
-      name: "SOC Analyst Practice",
-      issuer: "Hands-on Labs",
-      status: "Ongoing",
-    },
-  ] satisfies Credential[],
+  credentialFocus: [
+    "Academic foundation",
+    "Networking fundamentals",
+    "Practical labs",
+    "SOC learning path",
+  ],
+  credentials,
   contactLinks: [
     { label: "Email", href: "mailto:violet@example.com" },
     { label: "LinkedIn", href: "https://www.linkedin.com/" },

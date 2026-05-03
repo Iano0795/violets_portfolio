@@ -1,5 +1,6 @@
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { CredentialsSection } from "@/components/sections/CredentialsSection";
 import { ExperienceSection } from "@/components/sections/ExperienceSection";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
@@ -15,13 +16,6 @@ const aboutPlaceholder = {
 };
 
 const remainingPlaceholderSections = [
-  {
-    id: "certifications",
-    eyebrow: "Certifications",
-    title: "Credentials and learning milestones.",
-    description:
-      "This section will list certifications, courses, badges, and verified achievements.",
-  },
   {
     id: "contact",
     eyebrow: "Contact",
@@ -57,6 +51,8 @@ export default function Home() {
         <ExperienceSection />
 
         <ProjectsSection />
+
+        <CredentialsSection />
 
         {remainingPlaceholderSections.map((section) => (
           <section
