@@ -1,5 +1,6 @@
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { ExperienceSection } from "@/components/sections/ExperienceSection";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { SkillsSection } from "@/components/sections/SkillsSection";
 import { SectionHeader } from "@/components/ui/SectionHeader";
@@ -13,13 +14,6 @@ const aboutPlaceholder = {
 };
 
 const remainingPlaceholderSections = [
-  {
-    id: "experience",
-    eyebrow: "Experience",
-    title: "Practice, roles, and security growth.",
-    description:
-      "This section will capture relevant work, lab practice, volunteering, and hands-on experience.",
-  },
   {
     id: "projects",
     eyebrow: "Projects",
@@ -65,6 +59,8 @@ export default function Home() {
         </section>
 
         <SkillsSection />
+
+        <ExperienceSection />
 
         {remainingPlaceholderSections.map((section) => (
           <section

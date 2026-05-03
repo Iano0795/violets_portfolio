@@ -17,11 +17,14 @@ export type SkillHighlight = {
 };
 
 export type ExperienceItem = {
+  company: string;
   role: string;
-  organization: string;
   period: string;
+  location: string;
   summary: string;
-  highlights: string[];
+  bullets: string[];
+  tags: string[];
+  featured?: boolean;
 };
 
 export type Project = {
@@ -42,6 +45,52 @@ export type ContactLink = {
   label: string;
   href: string;
 };
+
+export const experience = [
+  {
+    company: "Adept College",
+    role: "Cybersecurity & Programming Intern",
+    period: "May 2024 - August 2024",
+    location: "Kenya",
+    summary:
+      "Supported practical cybersecurity and programming activities, including hands-on labs, basic security testing, and technical learning support.",
+    bullets: [
+      "Facilitated hands-on security labs using tools such as Nmap and Hydra.",
+      "Supported learners in understanding enumeration, brute-force concepts, and secure coding basics.",
+      "Assisted with basic programming and cybersecurity exercises.",
+      "Reinforced practical threat detection and incident analysis concepts through lab-based learning.",
+    ],
+    tags: [
+      "Cybersecurity Labs",
+      "Nmap",
+      "Hydra",
+      "Secure Coding",
+      "Technical Support",
+    ],
+    featured: true,
+  },
+  {
+    company: "Promze Store",
+    role: "Data Encoder & Reconciliation Assistant",
+    period: "September 2025 - November 2025",
+    location: "Kenya",
+    summary:
+      "Supported data accuracy, reconciliation, and record validation workflows with a focus on consistency and auditability.",
+    bullets: [
+      "Validated and reconciled 500+ records to improve data accuracy and consistency.",
+      "Maintained audit trails for record updates and reconciliation activities.",
+      "Identified data gaps, inconsistencies, and duplicate entries for correction.",
+      "Supported structured reporting and documentation for operational records.",
+    ],
+    tags: [
+      "Data Validation",
+      "Reconciliation",
+      "Audit Trails",
+      "Documentation",
+      "Reporting",
+    ],
+  },
+] satisfies ExperienceItem[];
 
 export const portfolio = {
   personal: {
@@ -161,20 +210,13 @@ export const portfolio = {
       description: "Findings written clearly for analysts, teams, and recruiters.",
     },
   ] satisfies SkillHighlight[],
-  experience: [
-    {
-      role: "Cybersecurity Portfolio Builder",
-      organization: "Independent Labs",
-      period: "Current",
-      summary:
-        "Developing hands-on defensive security projects that demonstrate monitoring, investigation, and reporting ability.",
-      highlights: [
-        "Documents lab findings in clear, recruiter-friendly case studies.",
-        "Practices alert triage, log review, and incident response workflows.",
-        "Maps project work to SOC analyst responsibilities and security frameworks.",
-      ],
-    },
-  ] satisfies ExperienceItem[],
+  experienceFocus: [
+    "Cybersecurity Labs",
+    "Data Integrity",
+    "Technical Support",
+    "Documentation",
+  ],
+  experience,
   projects: [
     {
       title: "SOC Alert Triage Lab",
