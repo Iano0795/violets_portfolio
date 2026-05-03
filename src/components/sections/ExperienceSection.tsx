@@ -1,7 +1,23 @@
-import { CalendarDays, CheckCircle2, MapPin } from "lucide-react";
+import {
+  CalendarDays,
+  CheckCircle2,
+  Database,
+  FileText,
+  Headset,
+  MapPin,
+  ShieldCheck,
+} from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import { portfolio } from "@/data/portfolio";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { cn } from "@/lib/utils";
+
+const focusIcons: Record<string, LucideIcon> = {
+  "Cybersecurity Labs": ShieldCheck,
+  "Data Integrity": Database,
+  "Technical Support": Headset,
+  Documentation: FileText,
+};
 
 export function ExperienceSection() {
   return (
@@ -18,14 +34,21 @@ export function ExperienceSection() {
         />
 
         <ul className="mt-10 grid gap-3 text-sm text-muted-foreground sm:grid-cols-2 lg:grid-cols-4">
-          {portfolio.experienceFocus.map((focus) => (
-            <li
-              className="surface-panel flex min-h-14 items-center border-accent/20 bg-accent/[0.045] px-4 py-3 font-semibold text-foreground/88"
-              key={focus}
-            >
-              {focus}
-            </li>
-          ))}
+          {portfolio.experienceFocus.map((focus) => {
+            const FocusIcon = focusIcons[focus] ?? ShieldCheck;
+
+            return (
+              <li
+                className="surface-panel flex min-h-14 items-center gap-3 border-accent/20 bg-accent/[0.045] px-4 py-3"
+                key={focus}
+              >
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-accent/25 bg-accent/10 text-accent">
+                  <FocusIcon aria-hidden="true" size={16} strokeWidth={1.8} />
+                </span>
+                <span className="font-semibold text-foreground/88">{focus}</span>
+              </li>
+            );
+          })}
         </ul>
 
         <div className="mt-8 grid gap-5 lg:grid-cols-2">
